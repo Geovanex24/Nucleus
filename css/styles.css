@@ -53,11 +53,18 @@ img {
   margin-bottom: 5rem;
 }
 
+@media (min-width: 768px) {
+  [class$="__grid"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 5rem;
+  }
+}
+
 /** ---Componentes--- */
 
 /* -- Componente - Listado --*/
-.listado {
-}
 .listado__elemento {
   background-color: var(--blanco);
   box-shadow: 0px 0px 15px 3px rgb(0 0 0 / 0.15);
@@ -144,9 +151,6 @@ img {
   }
   /* Todo: crear selector de atributo, para evitar repetir este código de grid */
   .header__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     gap: 4rem;
   }
 }
@@ -222,8 +226,6 @@ img {
   .nucleus__grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 5rem;
-    align-items: center;
   }
 }
 
@@ -299,22 +301,10 @@ img {
 .seguridad__heading {
   color: var(--blanco);
 }
-@media (min-width: 768px) {
-  /* Todo: crear selector de atributo, para evitar repetir este código de grid */
-  .seguridad__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
-    align-items: center;
-  }
-}
 /* -- Sección - Comisiones --*/
 /* Todo: crear selector de atributo, para evitar repetir este código de grid */
 @media (min-width: 768px) {
   .comisiones__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
     align-items: end;
   }
 }
@@ -389,7 +379,6 @@ img {
   .footer__grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 }
 .footer__logo {
